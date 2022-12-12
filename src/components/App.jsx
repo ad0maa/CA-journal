@@ -2,12 +2,13 @@ import React from 'react'
 import CategorySelection from './CategorySelection'
 import Home from './Home'
 import NewEntry from './NewEntry'
+import Navbar from './Navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
     <>
-      <h1>Journal</h1>
+      <Navbar />
       <BrowserRouter>
        <Routes>
         <Route path='/' element={<Home />} />
