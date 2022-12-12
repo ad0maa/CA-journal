@@ -1,9 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
+
 
 const CategorySelection = () => {
+    const [categories, setCategories] = useState(['Food', 'Coding', 'Work', 'Other'])
+
   return (
-    <div>CategorySelection</div>
-  )
+    <>
+    <h2>Please select a cateory</h2>
+    <ul>
+        {categories.map((cat,index) => (
+            <li key={index}>
+                <Link to={`/entry/new/${cat}`}>{cat}</Link>
+            </li>
+        ))}
+    </ul>
+    </>
+    )
 }
 
 export default CategorySelection
