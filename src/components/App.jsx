@@ -51,12 +51,10 @@ const App = () => {
 
   const addEntry = async (category, content) => {
     const id = entries.length
-
-    const categoryObject = categories.find(cat => cat.name === category)
-
+    // const categoryObject = categories.find(cat => cat.name === category)
     // Add a new entry
     const newEntry = {
-        category: categoryObject,
+        category: category,
         content: content
     }
     //Post new entry to API
@@ -68,8 +66,6 @@ const App = () => {
         body: JSON.stringify(newEntry)
     })
     const data = await returnedEntry.json()
-
-
     setEntries([...entries, data])
     nav(`/entry/${id}`)
   }
