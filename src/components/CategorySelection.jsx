@@ -1,17 +1,16 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 
 
-const CategorySelection = () => {
-    const [categories, setCategories] = useState(['Food', 'Coding', 'Work', 'Other'])
 
+const CategorySelection = ({ categories }) => {
   return (
     <>
-    <h2>Please select a cateory</h2>
+    <h2>Please select a category</h2>
     <ul>
         {categories.map((cat,index) => (
             <li key={index}>
-                <Link to={`/entry/new/${cat}`}>{cat}</Link>
+                <Link to={`/entry/new/${cat.name}`}>{cat.name}</Link>
             </li>
         ))}
     </ul>

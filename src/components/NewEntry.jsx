@@ -4,24 +4,10 @@ import { useParams } from 'react-router-dom'
 const NewEntry = ({addEntry}) => {
     const { category } = useParams()
     const [entry,setEntry] = useState('')
-    // const nav = useNavigate()
 
     function submit(evt) {
         evt.preventDefault()
         addEntry(category, entry)
-
-
-        // This has been moved to App.jsx
-
-        // const id = entries.length
-        // // Add a new entry
-        // const newEntry = {
-        //     category: category,
-        //     content: entry
-        // }
-        // setEntries([...entries, newEntry])
-        // nav(`/entry/${id}`)
-
     }
 
   return (
