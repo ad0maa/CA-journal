@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 const CategorySelection = ({ categories }) => {
   return (
     <>
-    <h2>Please select a category</h2>
+    <h2>Please select a category:</h2>
     <ul>
         {categories.map((cat,index) => (
             <li key={index}>
