@@ -23,7 +23,7 @@ const App = () => {
   // only on mount
   useEffect ( () => {
     async function fetchCategories() {
-        const res = await fetch('http://ca-journal-api-production.up.railway.app/categories')
+        const res = await fetch('https://ca-journal-api-production.up.railway.app/categories')
         const data = await res.json()
         setCategories(data)
     }
@@ -34,7 +34,7 @@ const App = () => {
   // only on mount
   useEffect (() => {
     async function fetchEntries() {
-    const res = await fetch('http://ca-journal-api-production.up.railway.app/entries')
+    const res = await fetch('https://ca-journal-api-production.up.railway.app/entries')
     const data = await res.json()
     setEntries(data)
   }
@@ -58,7 +58,7 @@ const App = () => {
         content: content
     }
     //Post new entry to API
-    const returnedEntry = await fetch ('http://ca-journal-api-production.up.railway.app/entries', {
+    const returnedEntry = await fetch ('https://ca-journal-api-production.up.railway.app/entries', {
       method:'POST',
        headers: {
         Accept: 'application/json',
