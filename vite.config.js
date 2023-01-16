@@ -8,4 +8,7 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
   },
+  preview: {
+    port: process.env.PORT || 8001,
+  },
 });
